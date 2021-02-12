@@ -1,6 +1,6 @@
 # Burger Logger 
 
-![Demonstration](public\assets\img\burgerShowcase.gif)
+![Demonstration](public/assets/img/burgerShowcase.gif)
 
 # Introduction
 
