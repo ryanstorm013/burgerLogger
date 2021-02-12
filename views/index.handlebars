@@ -1,0 +1,57 @@
+<div id="header">
+    <h1>EAT-DA-BURGER!</h1>
+    <img src="https://elements.evonik.com/wp-content/uploads/2019/11/burger-fb.jpg" width="250" alt="burgerImg">
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="display" id="displayBurger">
+            <h3 style="text-align: center;">BURGERS ORDERED:</h3>
+            <ul id="item">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=false}}
+                <button class="devouredId" id="{{this.id}}" data-newdevoured="{{devoured}}">
+                    Devour it!
+                </button>
+
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+    <div class="display" id="displayDevour">
+        <h3 style="text-align: center;">BURGERS DEVOURED: </h3>
+
+        <ul id="devItem">
+            {{#each burgers}}
+
+            {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<div class="row" id="formRow">
+    <div class="col-md-12">
+        <div id="burgerForm" class="center">
+            <h2>ENTER A BURGER BELOW</h2>
+            <form name="burger-form"id="create-form">
+
+                <div class="form-group">
+                    <label for="burg">Which burger would you like to order? </label>
+                    <input type="text" id="burger_input" name="name">
+                </div>
+
+                <button id="subButton" type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
