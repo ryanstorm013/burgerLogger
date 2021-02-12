@@ -6,6 +6,8 @@
 
 Have the user submit the burgers they want to order, either they can remove that order when placed or consume the burger whenever they are ready.
 
+https://burger-logger23.herokuapp.com/
+
 ## How to install
 
 To download your own Burger logger:
